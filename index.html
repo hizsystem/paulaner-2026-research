@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paulaner 2026 Campaign Research</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --accent: #b8860b;
+  --accent-light: #fdf6e3;
+  --blue: #2563eb;
+  --blue-light: #eff6ff;
+  --orange: #ea580c;
+  --orange-light: #fff7ed;
+  --green: #059669;
+  --green-light: #ecfdf5;
+  --red: #dc2626;
+  --red-light: #fef2f2;
+  --purple: #7c3aed;
+  --purple-light: #f5f3ff;
+  --slate: #64748b;
+  --slate-light: #f8fafc;
+  --text: #1e293b;
+  --text-secondary: #475569;
+  --border: #e2e8f0;
+  --bg: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+/* Header */
+.hero {
+  text-align: center;
+  padding: 60px 0 40px;
+  border-bottom: 3px solid var(--accent);
+  margin-bottom: 48px;
+}
+.hero-label {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+.hero h1 {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+.hero .subtitle {
+  font-size: 17px;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+.hero .meta {
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--slate);
+}
+.hero .meta span { margin: 0 8px; }
+
+/* TOC */
+.toc {
+  background: var(--slate-light);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px 28px;
+  margin-bottom: 48px;
+}
+.toc h2 {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--slate);
+  margin-bottom: 12px;
+}
+.toc ol {
+  padding-left: 20px;
+}
+.toc li {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+.toc a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+}
+.toc a:hover {
+  color: var(--accent);
+}
+
+/* Section */
+h2 {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  margin: 56px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--text);
+}
+h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 32px 0 12px;
+  color: var(--text);
+}
+h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 20px 0 8px;
+  color: var(--text-secondary);
+}
+
+p { margin-bottom: 12px; }
+
+.section-divider {
+  border: 0;
+  height: 2px;
+  background: var(--accent);
+  margin: 56px 0;
+  opacity: 0.3;
+}
+
+/* Blockquote variants */
+blockquote {
+  border-left: 4px solid var(--accent);
+  background: var(--accent-light);
+  padding: 16px 20px;
+  margin: 20px 0;
+  border-radius: 0 6px 6px 0;
+  font-size: 15px;
+}
+blockquote.insight {
+  border-left-color: var(--blue);
+  background: var(--blue-light);
+}
+blockquote.warning {
+  border-left-color: var(--red);
+  background: var(--red-light);
+}
+blockquote.strategy {
+  border-left-color: var(--green);
+  background: var(--green-light);
+}
+blockquote strong { font-weight: 700; }
+
+/* Callout */
+.callout {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  font-size: 14px;
+}
+.callout.gold {
+  background: var(--accent-light);
+  border: 1px solid #d4a843;
+}
+.callout.blue {
+  background: var(--blue-light);
+  border: 1px solid #93c5fd;
+}
+.callout.green {
+  background: var(--green-light);
+  border: 1px solid #6ee7b7;
+}
+.callout .icon { font-size: 20px; flex-shrink: 0; }
+.callout .content { flex: 1; }
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0 24px;
+  font-size: 14px;
+}
+th {
+  background: #f1f5f9;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 2px solid var(--border);
+}
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+tr:last-child td { border-bottom: none; }
+tr.highlight td {
+  background: var(--accent-light);
+  font-weight: 600;
+}
+td.label {
+  font-weight: 600;
+  white-space: nowrap;
+  width: 140px;
+  color: var(--text-secondary);
+}
+
+/* Badge */
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.3px;
+}
+.badge.gold { background: var(--accent); color: white; }
+.badge.blue { background: var(--blue); color: white; }
+.badge.green { background: var(--green); color: white; }
+.badge.red { background: var(--red); color: white; }
+.badge.purple { background: var(--purple); color: white; }
+.badge.slate { background: var(--slate); color: white; }
+
+/* Key number */
+.key-number {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--slate-light);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 24px;
+  margin: 4px;
+  min-width: 140px;
+}
+.key-number .value {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--accent);
+  line-height: 1.2;
+}
+.key-number .label-text {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.numbers-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+/* Lists */
+ul, ol { padding-left: 20px; margin-bottom: 12px; }
+li { margin-bottom: 4px; }
+
+/* Strong emphasis */
+.em-gold { color: var(--accent); font-weight: 700; }
+.em-blue { color: var(--blue); font-weight: 700; }
+.em-red { color: var(--red); font-weight: 700; }
+
+/* Comparison card */
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 20px 0;
+}
+.compare-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+}
+.compare-card h4 {
+  margin: 0 0 8px;
+  font-size: 14px;
+}
+.compare-card ul {
+  font-size: 13px;
+  margin: 0;
+}
+
+/* Print */
+@media print {
+  .container { padding: 20px; }
+  .section-divider { margin: 32px 0; }
+  blockquote, .callout, table, .compare-grid { break-inside: avoid; }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .hero h1 { font-size: 24px; }
+  .hero { padding: 40px 0 30px; }
+  h2 { font-size: 19px; }
+  .compare-grid { grid-template-columns: 1fr; }
+  .numbers-row { flex-direction: column; align-items: center; }
+  .key-number { min-width: 100%; }
+  table { font-size: 13px; }
+  td, th { padding: 8px 10px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-label">Internal Research Document</div>
+  <h1>Paulaner 2026<br>Campaign Research</h1>
+  <div class="subtitle">하이네켄코리아 파울라너 연간 캠페인 대행사 제안 PT 준비</div>
+  <div class="meta">
+    PT <strong>2026.04.08</strong><span>|</span>예산 <strong>1.7억 / 2.5억</strong><span>|</span>Creative <strong>40%</strong>
+  </div>
+</div>
+
+<!-- TOC -->
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#market">시장 컨텍스트 — 밀맥주 시장은 줄고 있다</a></li>
+    <li><a href="#target">타겟 — MZ세대 맥주 음용자</a></li>
+    <li><a href="#highball">하이볼 vs 맥주 — 구조적 대체와 반격 포인트</a></li>
+    <li><a href="#competitors">경쟁사 — 온오프라인 플레이</a></li>
+    <li><a href="#oktoberfest">옥토버페스트 — 맥주 너머의 축제</a></li>
+    <li><a href="#festivals">해외 비어축제 벤치마크</a></li>
+    <li><a href="#strategy">전략 프레임워크</a></li>
+    <li><a href="#regulation">주류 광고 규제 핵심</a></li>
+  </ol>
+</nav>
+
+<!-- 1. MARKET CONTEXT -->
+<h2 id="market">1. 시장 컨텍스트</h2>
+
+<div class="numbers-row">
+  <div class="key-number"><div class="value">~17만HL</div><div class="label-text">밀맥주 Off채널 규모 (축소 중)</div></div>
+  <div class="key-number"><div class="value">14%</div><div class="label-text">파울라너 밀맥주 MS (3위)</div></div>
+  <div class="key-number"><div class="value">1.5%</div><div class="label-text">파울라너 브랜드 파워</div></div>
+  <div class="key-number"><div class="value">8~9위</div><div class="label-text">수입맥주 전체 순위</div></div>
+</div>
+
+<h3>밀맥주 점유율</h3>
+<table>
+  <tr><th>브랜드</th><th>MS</th><th>원산지</th><th>포지셔닝</th></tr>
+  <tr><td>크로넨버그 1664</td><td><strong>35%</strong></td><td>프랑스</td><td>패션, 프렌치 프리미엄</td></tr>
+  <tr><td>호가든</td><td><strong>28%</strong></td><td>벨기에</td><td>자연, 휴식, 오리지널</td></tr>
+  <tr class="highlight"><td>파울라너</td><td><strong>14%</strong></td><td>독일</td><td>옥토버페스트, 정통 독일</td></tr>
+  <tr><td>곰표</td><td>6%</td><td>한국</td><td>수제맥주 콜라보</td></tr>
+  <tr><td>에델바이스</td><td>5%</td><td>오스트리아</td><td>알프스 청량감</td></tr>
+</table>
+
+<h3>파울라너 볼륨 추이 (Off채널, HL)</h3>
+<table>
+  <tr><th>2019</th><th>2020</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th></tr>
+  <tr><td>33,918</td><td>41,523</td><td><strong>55,942</strong></td><td>44,574</td><td>36,645</td><td>37,523</td></tr>
+</table>
+<p>2021년 피크 이후 <span class="em-red">-33% 하락</span>, 2023~24년 약 37,000HL에서 안정화</p>
+
+<h3>시장 축소의 4가지 구조적 원인</h3>
+<table>
+  <tr><th>원인</th><th>수치</th></tr>
+  <tr><td>하이볼 & RTD 급부상</td><td>RTD 시장 358억(2022) &rarr; <strong>1,194억(2024)</strong> +233%</td></tr>
+  <tr><td>소버 큐리어스</td><td>20대 주점 소비 <strong>-20.9%</strong></td></tr>
+  <tr><td>일본 라거 귀환</td><td>아사히 수입맥주 1위 탈환 (~1,600억)</td></tr>
+  <tr><td>밀맥주 차별화 약화</td><td>소비자에게 "다 비슷한 맥주"로 인식</td></tr>
+</table>
+
+<blockquote class="strategy">
+  <strong>그럼에도 기회가 있는 이유:</strong> (1) 하이네켄코리아 유통 전환 = 리런칭 모멘텀 (2) 옥토버페스트라는 독점 플랫폼 (3) "어떻게 마시는가"가 중요해진 경험 소비 트렌드
+</blockquote>
+
+<hr class="section-divider">
+
+<!-- 2. TARGET -->
+<h2 id="target">2. 타겟 — MZ세대(21~35세) 맥주 음용자</h2>
+
+<h3>MZ세대 주류 소비 변화</h3>
+<ul>
+  <li><strong>회식 문화 붕괴</strong> — 코로나 3년간 "술 없는 사회" 경험. 소맥의 소비 기반 자체가 약해짐</li>
+  <li><strong>"나에게 맛있는 술" 시대</strong> — 취하기 위해 마시지 않음. 탐색형 소비</li>
+  <li><strong>"숙취 대신 성취"</strong> — 다음 날 컨디션 우선. 한두 잔 &rarr; 9시 전 해산</li>
+  <li><strong>무알코올 급성장</strong> — 200억(2022) &rarr; 700억(2024), 2027년 946억 전망</li>
+</ul>
+
+<h3>MZ 맥주 라이프스타일</h3>
+<table>
+  <tr><th>트렌드</th><th>내용</th></tr>
+  <tr><td>편맥 & 콜라보</td><td>곰표 밀맥주 품절 대란 &rarr; 말표 흑맥주, 쥬시후레쉬맥주 등. "재미있는 맥주" = SNS 인증 소재</td></tr>
+  <tr><td>모디슈머</td><td>테라+참이슬 = "테슬라", 테라+진로 = "테진아". 소비자가 조합을 만듦</td></tr>
+  <tr><td>크래프트비어펍</td><td>서울브루어리(합정): 요리학교 셰프 + 실험적 맥주. 맥주 페어링이 미식 문화로</td></tr>
+  <tr><td>SNS 콘텐츠</td><td>맥주 = "인스타그래머블" 소재. 경험을 제공하면 콘텐츠는 알아서 나옴</td></tr>
+</table>
+
+<h3>타겟 세그멘테이션 제안</h3>
+<div class="compare-grid">
+  <div class="compare-card">
+    <h4><span class="badge gold">Core</span> 경험 수집가</h4>
+    <ul>
+      <li>"기록될 만한 순간"을 모으는 사람</li>
+      <li>맥주 자체보다 경험에 돈을 씀</li>
+      <li>접점: 서울 옥토버페스트, 뮌헨 콘텐츠</li>
+    </ul>
+  </div>
+  <div class="compare-card">
+    <h4><span class="badge blue">Core</span> 취향 탐험가</h4>
+    <ul>
+      <li>"나에게 맛있는 술"을 찾아 다니는 사람</li>
+      <li>크래프트비어, 블라인드 테이스팅 관심</li>
+      <li>접점: 바이스비어 vs 헬 비교 체험</li>
+    </ul>
+  </div>
+  <div class="compare-card">
+    <h4><span class="badge green">Core</span> 소셜 건배러</h4>
+    <ul>
+      <li>"함께 마시는 순간"의 분위기 중시</li>
+      <li>맥주 = 대규모 모임의 기본</li>
+      <li>접점: #ShareYourProst, 단체 건배</li>
+    </ul>
+  </div>
+  <div class="compare-card">
+    <h4><span class="badge purple">Sub</span> 의식적 절제파</h4>
+    <ul>
+      <li>소버 큐리어스. 좋은 것으로 한 잔만</li>
+      <li>무알코올 or 프리미엄 한 잔</li>
+      <li>접점: 파울라너 0.0, "마시지 않아도 함께"</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- 3. HIGHBALL -->
+<h2 id="highball">3. 하이볼 vs 맥주</h2>
+
+<h3>하이볼이 맥주를 이긴 이유</h3>
+
+<div class="numbers-row">
+  <div class="key-number"><div class="value">80%</div><div class="label-text">하이볼 구매자 중 2030</div></div>
+  <div class="key-number"><div class="value">0.6% &rarr; 11.3%</div><div class="label-text">CU 하이볼 매출 비중 변화</div></div>
+  <div class="key-number"><div class="value">2,600억</div><div class="label-text">RTD 시장 2027 전망</div></div>
+</div>
+
+<table>
+  <tr><th>하이볼의 강점</th><th>내용</th></tr>
+  <tr><td>맛 커스터마이징</td><td>나만의 레시피 가능. 인기 주류 1위(25.6%, 롯데멤버스)</td></tr>
+  <tr><td>낮은 도수</td><td>위스키 풍미 + 10도 미만. 저도주 선호 54.1%</td></tr>
+  <tr><td>SNS 콘텐츠화</td><td>예쁜 잔, 이색 레시피 &rarr; 릴스/틱톡 공유</td></tr>
+  <tr><td>힙한 이미지</td><td>"아재 술" 위스키를 MZ가 재발견</td></tr>
+  <tr><td>가성비</td><td>위스키 1병으로 여러 잔. 편의점 저가 위스키 2만원대</td></tr>
+</table>
+
+<h3>맥주가 다시 이길 수 있는 포인트</h3>
+<div class="callout gold">
+  <div class="icon">&#9733;</div>
+  <div class="content">
+    하이볼에 없고, 파울라너에 있는 것:
+    <br><strong>원산지 스토리</strong> &mdash; 1634년 수도원, 뮌헨 6대 양조장. 캔 하이볼에는 서사가 없다
+    <br><strong>공간 경험</strong> &mdash; 옥토버페스트라는 독점 플랫폼. 하이볼에는 축제가 없다
+    <br><strong>집단 건배</strong> &mdash; Ein Prosit 떼창 + 1리터 Mass 잔. 하이볼은 혼자 조용히 마시는 술
+    <br><strong>성지순례</strong> &mdash; 서울에서 맛보고 뮌헨에서 진짜를 경험하는 여정
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- 4. COMPETITORS -->
+<h2 id="competitors">4. 경쟁사 온오프라인 플레이</h2>
+
+<h3>경쟁사별 선점 키워드 & 핵심 액션</h3>
+
+<table>
+  <tr><th>브랜드</th><th>선점 키워드</th><th>Best Play</th></tr>
+  <tr><td><strong>호가든</strong></td><td>자연, 휴식</td><td>육각잔 들고 펍 가면 생맥주 무료. 슈카월드 협업. 라탄백 굿즈</td></tr>
+  <tr><td><strong>1664 블랑</strong></td><td>패션, 예술</td><td>런던 패션위크 2년 연속 파트너. 로버트 패틴슨 앰배서더. 서울패션위크 애프터파티. 덴마크 리포지셔닝 성공</td></tr>
+  <tr><td><strong>에델바이스</strong></td><td>알프스, 감각</td><td>2층 팝업 (체험+아트). 공간 = 브랜드 이해. 하이네켄 포트폴리오 내 경쟁</td></tr>
+  <tr><td><strong>카스</strong></td><td>축제, 젊음</td><td>물폭탄 축제 47만명. 얼리버드 1분 매진. 국내 축제 장악</td></tr>
+  <tr><td><strong>스텔라</strong></td><td>미식, 프리미엄</td><td>고급 레스토랑 팝업 페어링. 한남동 일 평균 300명+. 넷플릭스 백요리사 콜라보</td></tr>
+  <tr><td><strong>버드와이저</strong></td><td>음악, 파티</td><td>EDM 페스티벌. 자체 음악 플랫폼 '버드 박스'. FIFA/NBA 스폰서</td></tr>
+  <tr><td><strong>아사히</strong></td><td>여행</td><td>트래블 바 팝업 5개국 테마존 + 입국 스탬프. 90분 대기줄. 블랙핑크 앰배서더</td></tr>
+  <tr><td><strong>칭따오</strong></td><td>양꼬치 페어링</td><td>"양꼬치엔 칭따오" 인식 선점. 뮤직페스 판매 +72%</td></tr>
+</table>
+
+<blockquote>
+  <strong>핵심:</strong> 호가든은 "혼자 쉬면서 마시는 맥주", 크로넨버그는 "예쁜 곳에서 들고 있는 맥주".<br>
+  파울라너는 <strong>"10명이 동시에 잔을 부딪치는 맥주"</strong>여야 한다.
+</blockquote>
+
+<h3>파울라너만의 차별화 자산</h3>
+<table>
+  <tr><th></th><th>호가든</th><th>크로넨버그</th><th>에델바이스</th><th style="background:var(--accent-light)">파울라너</th></tr>
+  <tr><td class="label">축제</td><td>없음</td><td>없음</td><td>없음</td><td style="background:var(--accent-light)"><strong>옥토버페스트</strong></td></tr>
+  <tr><td class="label">스포츠</td><td>없음</td><td>없음</td><td>없음</td><td style="background:var(--accent-light)"><strong>FC 바이에른</strong></td></tr>
+  <tr><td class="label">역사</td><td>1445</td><td>1664</td><td>-</td><td style="background:var(--accent-light)"><strong>1634</strong></td></tr>
+  <tr><td class="label">톤</td><td>힐링</td><td>패션</td><td>청량</td><td style="background:var(--accent-light)"><strong>건배/에너지</strong></td></tr>
+</table>
+
+<hr class="section-divider">
+
+<!-- 5. OKTOBERFEST -->
+<h2 id="oktoberfest">5. 옥토버페스트 &mdash; 맥주 너머의 축제</h2>
+
+<blockquote>
+  옥토버페스트는 "맥주 축제"가 아니라 <strong>테마파크 + 퍼레이드 + 음식 축제 + 콘서트 + 가족 나들이</strong>가 합쳐진 종합 축제다.
+</blockquote>
+
+<h3>놀이기구 & 어트랙션</h3>
+<table>
+  <tr><th>어트랙션</th><th>특징</th></tr>
+  <tr><td>올림피아 루핑</td><td>세계 최대 이동식 롤러코스터 (5회전)</td></tr>
+  <tr><td>쥘 베른 타워</td><td>80m 상공 세계 최고 높이 모바일 공중그네</td></tr>
+  <tr><td>대관람차</td><td>50m, 40개 곤돌라. 축제장 전경 조망</td></tr>
+  <tr><td>토보건</td><td>포대자루 미끄럼 &mdash; 축제 명물</td></tr>
+  <tr><td>악마의 휠</td><td>회전 원판 위 오래 버티기 &mdash; 관객 구경 재미</td></tr>
+</table>
+
+<h3>퍼레이드 & 개막식</h3>
+<ul>
+  <li><strong>양조장 퍼레이드</strong> (첫날 토요일 오전) &mdash; 화려한 마차 행진</li>
+  <li><strong>"O'zapft is!"</strong> (첫날 정오) &mdash; 뮌헨 시장이 첫 맥주통 개봉. 이 선언 전까지 맥주 판매 금지</li>
+  <li><strong>전통 의상 퍼레이드</strong> (첫째 일요일) &mdash; 수천 명이 7km 행진. 최대 볼거리</li>
+</ul>
+
+<h3>음식 &mdash; 헨들 54만 마리</h3>
+<table>
+  <tr><th>음식</th><th>2025 소비량</th></tr>
+  <tr><td><strong>헨들 (통닭 반 마리)</strong></td><td>549,899마리</td></tr>
+  <tr><td>슈바인스학세 (족발)</td><td>75,456개</td></tr>
+  <tr><td>생선구이</td><td>44,320kg</td></tr>
+</table>
+<p>+ 프레첼, 구운 아몬드, 사과 슈트루델, 비건 메뉴(케스슈파첸, 람슈바메를) 수요 증가</p>
+
+<h3>전통 문화 &mdash; 재미있는 에티켓</h3>
+<div class="callout blue">
+  <div class="icon">&#127866;</div>
+  <div class="content">
+    <strong>건배(Prost) 시 상대방 눈 안 쳐다보면 7년 재수 없음</strong> (독일 속설)<br>
+    벤치 위 올라가서 노래 = 장려 / 테이블 위 올라가기 = 금지<br>
+    앞치마 매듭 왼쪽 = 싱글 / 오른쪽 = 연인 있음<br>
+    프레첼 장식 = 싱글 / 에델바이스 핀 = 연인 있음
+  </div>
+</div>
+
+<h3>가족 프로그램</h3>
+<ul>
+  <li><strong>가족의 날 (화요일)</strong> &mdash; 놀이기구 요금 대폭 할인</li>
+  <li>낮 시간대 = "거의 키즈카페 수준". 놀이공원, 논알코올 음료, 아기 메뉴</li>
+  <li>수유실, 기저귀 교환실 운영</li>
+</ul>
+
+<h3>Oide Wiesn (역사적 옥토버페스트)</h3>
+<ul>
+  <li>축제장 남쪽 별도 구역. 1810년 초기 축제 재현. 입장료 4유로</li>
+  <li>2025년 약 36만 명 방문</li>
+  <li>1919년형 체인 그네, 1928년 모토드롬, 해적선 &mdash; 각 1.50유로</li>
+  <li>세라믹 맥주잔 + 나무통 생맥주 (현대 축제와 다른 감성)</li>
+  <li>아이들: 마리오네트 인형극(무료) + 스탬프 투어 보물찾기</li>
+</ul>
+
+<hr class="section-divider">
+
+<!-- 6. FESTIVALS -->
+<h2 id="festivals">6. 해외 비어축제 벤치마크</h2>
+
+<h3>일본 요코하마 옥토버페스트</h3>
+<table>
+  <tr><td class="label">규모</td><td>2024년 13만 명+ 방문 / 18일간</td></tr>
+  <tr><td class="label">특징</td><td>독일 공식 인증 양조장 5곳 참여. 논알코올 라인업 완비</td></tr>
+  <tr><td class="label">브랜드 활성화</td><td>노리타케 x 요코하마 맥주 한정판 인터랙티브 머그잔 (건배하면 그림 이어짐) &rarr; SNS 바이럴</td></tr>
+</table>
+
+<h3>글로벌 비어축제 트렌드</h3>
+<table>
+  <tr><th>트렌드</th><th>사례</th><th>효과</th></tr>
+  <tr><td>게이미피케이션</td><td>Great American Beer Fest: 팬 배틀, 코스튬 경연</td><td>체류시간 + SNS</td></tr>
+  <tr><td>경쟁형 게임</td><td>벨기에 Beer Pong Championship</td><td>"스포츠 경험"으로 전환</td></tr>
+  <tr><td>카지노식 엔터</td><td>유럽: 룰렛, 카드 챌린지 (토큰 보상)</td><td>스릴 + 맥주</td></tr>
+  <tr><td>디지털 도입</td><td>중국 칭다오: 앱 실시간 텐트 현황, 페이스ID 결제</td><td>편의성</td></tr>
+</table>
+
+<h3>한국 맥주 축제</h3>
+<table>
+  <tr><th>축제</th><th>규모</th><th>핵심</th></tr>
+  <tr><td>동대문 브루브루</td><td>2일 3만명</td><td>만족도 97%, 재방문 98%</td></tr>
+  <tr><td>센텀맥주축제</td><td>6일 3만+</td><td>주말 사전 매진. 쏘맥자격증, 포토존</td></tr>
+  <tr><td>대구 치맥페스티벌</td><td>4일</td><td>카스 7년 연속. 치킨+맥주</td></tr>
+  <tr class="highlight"><td><strong>서울 옥토버페스트</strong></td><td><strong>10일 18만명</strong></td><td><strong>문화비축기지. 파울라너의 전장</strong></td></tr>
+</table>
+
+<hr class="section-divider">
+
+<!-- 7. STRATEGY -->
+<h2 id="strategy">7. 전략 프레임워크</h2>
+
+<blockquote>
+  <strong>한 줄 전략:</strong> 축소되는 밀맥주 시장에서 싸우지 않는다. 옥토버페스트라는 독보적 플랫폼으로 "파울라너 = 독일 맥주의 정통"을 각인시키고, 서울에서 뮌헨까지 이어지는 경험 여정을 설계한다.
+</blockquote>
+
+<h3>3가지 핵심 전략 선택</h3>
+
+<div class="callout gold">
+  <div class="icon">1</div>
+  <div class="content">
+    <strong>밀맥주 3위가 아니라, "독일 대표 맥주"로</strong><br>
+    17만HL 축소 시장에서 MS 싸움은 소모전. 바이스비어 + 뮌헨 헬(라거) 투트랙으로 볼륨 확장. 국내 맥주 시장 80%가 라거.
+  </div>
+</div>
+<div class="callout gold">
+  <div class="icon">2</div>
+  <div class="content">
+    <strong>"Life Unfiltered"를 공간 경험으로 번역</strong><br>
+    캠페인 슬로건을 광고 카피가 아니라, 9개 컨테이너 안에서 체감하는 경험으로. 무여과(제품) + 꾸밈없는 순간(감정) + 디지털 디톡스(철학).
+  </div>
+</div>
+<div class="callout gold">
+  <div class="icon">3</div>
+  <div class="content">
+    <strong>서울 &rarr; 뮌헨, 하나의 여정</strong><br>
+    사전 버즈(8월) &rarr; 서울 체험(9월) &rarr; 뮌헨 정통성(9~10월) &rarr; 일상 전환(10월~). 인플루언서 뮌헨 파견이 정통성 증명 장치.
+  </div>
+</div>
+
+<h3>서울 옥토버페스트 부스 컨셉: "Nine Chapters of Munchen"</h3>
+<table>
+  <tr><th>#</th><th>존</th><th>경험</th></tr>
+  <tr><td>1</td><td>The Brewery</td><td>양조 스토리. 원료 만지기. 무여과 과정 시각화</td></tr>
+  <tr><td>2</td><td>The Tap</td><td>생맥주 시음. 바이스비어 vs 헬 블라인드 테이스팅</td></tr>
+  <tr><td>3</td><td>The Biergarten</td><td>야외 비어가든. 나무 벤치 + 스트링라이트</td></tr>
+  <tr><td>4</td><td>The Kitchen</td><td>바이에른 푸드 페어링 (프레첼, 바이스부어스트)</td></tr>
+  <tr><td>5</td><td>The Sound</td><td>바이에른 음악. "Ein Prosit" 떼창</td></tr>
+  <tr><td>6</td><td>The Wardrobe</td><td>디른들/레더호젠 체험 &rarr; 자연스러운 인증샷</td></tr>
+  <tr><td>7</td><td>The Game</td><td>맥주잔 들기 대회, 맥주 퀴즈, 블라인드 테이스팅</td></tr>
+  <tr><td>8</td><td>The Story</td><td>뮌헨 360도 영상 몰입. "내년엔 진짜 뮌헨에서"</td></tr>
+  <tr><td>9</td><td>The Prost</td><td>피날레 건배. 인터랙티브 머그잔. 집단 건배</td></tr>
+</table>
+
+<h3>예산 구조</h3>
+<table>
+  <tr><th>항목</th><th>1.7억 (Base)</th><th>2.5억 (Full)</th></tr>
+  <tr><td>서울 옥토버페스트</td><td>9컨테이너 디자인+운영</td><td>+ 사전 버즈 캠페인</td></tr>
+  <tr><td>뮌헨 파견</td><td>5인 / 3박4일</td><td>7인 / 4박5일 + 매거진 화보</td></tr>
+  <tr><td>인스타그램</td><td>시즌 집중 3개월</td><td>연간 Always-on</td></tr>
+  <tr><td>DOOH</td><td>미포함</td><td>코엑스/스타필드 야간</td></tr>
+</table>
+
+<h3>차별화 선제 제안 &mdash; RFP에 없는 것</h3>
+<table>
+  <tr><th>아이디어</th><th>근거</th></tr>
+  <tr><td><strong>뮌헨 헬(라거) 투트랙</strong></td><td>RFP 브랜드 소개에 포함, SOW에 빠짐. 국내 80%가 라거</td></tr>
+  <tr><td><strong>FC 바이에른 연계</strong></td><td>2031년까지 공식 파트너. 레전드팀 유니폼 스폰서. 한국 팬 베이스</td></tr>
+  <tr><td><strong>무알코올 트렌드</strong></td><td>파울라너 0.0 + Audi F1 파트너십(2026 데뷔). 소버 큐리어스 대응</td></tr>
+  <tr><td><strong>UGC 챌린지</strong></td><td>#ShareYourProst. 경품 불가 우회 &mdash; "이 달의 Prost" 공식 채널 피처링</td></tr>
+</table>
+
+<hr class="section-divider">
+
+<!-- 8. REGULATION -->
+<h2 id="regulation">8. 주류 광고 규제 핵심</h2>
+
+<blockquote class="warning">
+  <strong>주의:</strong> 주류 마케팅에서 법적 리스크는 치명적. 모든 크리에이티브에 사전 법무 검토 필수.
+</blockquote>
+
+<table>
+  <tr><th>규제</th><th>내용</th></tr>
+  <tr><td class="label">경품 제공</td><td><span class="em-red">맥주 구매 시 사은품/추첨 = 불법</span> (1년 이하 징역 or 1천만원 벌금)</td></tr>
+  <tr><td class="label">DOOH 시간</td><td>디지털 옥외 동영상: 07:00~22:00 상영 불가 (야간만 가능)</td></tr>
+  <tr><td class="label">인플루언서</td><td>"광고" / "협찬받음" 한국어 명시 필수</td></tr>
+  <tr><td class="label">경고문구</td><td>모든 광고 소재에 과음 경고문구 필수</td></tr>
+  <tr><td class="label">2026.09 신규</td><td>술병에 음주운전/임신부 경고 픽토그램 의무 (축제 시기와 겹침!)</td></tr>
+  <tr><td class="label">TV/방송</td><td>17도 미만: 7시~22시 금지 / 17도 이상: TV 전면 금지</td></tr>
+</table>
+
+<!-- FOOTER -->
+<hr class="section-divider">
+<div style="text-align:center; color:var(--slate); font-size:13px; padding:20px 0;">
+  <p><strong>Paulaner 2026 Campaign Research</strong></p>
+  <p>Last updated: 2026-03-25 | Sources: NotebookLM (420+ sources), NielsenIQ, Euromonitor, OpenSurvey</p>
+  <p style="margin-top:8px; font-size:11px; color:#94a3b8;">Internal use only. Confidential.</p>
+</div>
+
+</div>
+</body>
+</html>
