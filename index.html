@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{--accent:#b8860b;--accent-light:#fdf6e3;--blue:#2563eb;--blue-light:#eff6ff;--green:#059669;--green-light:#ecfdf5;--red:#dc2626;--red-light:#fef2f2;--purple:#7c3aed;--purple-light:#f5f3ff;--slate:#64748b;--slate-light:#f8fafc;--text:#1e293b;--text-secondary:#475569;--border:#e2e8f0;--bg:#fff}
+:root{--accent:#f97316;--accent-light:#fff7ed;--blue:#2563eb;--blue-light:#eff6ff;--green:#059669;--green-light:#ecfdf5;--red:#dc2626;--red-light:#fef2f2;--purple:#7c3aed;--purple-light:#f5f3ff;--slate:#64748b;--slate-light:#f8fafc;--text:#1e293b;--text-secondary:#475569;--border:#e2e8f0;--bg:#fff}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif;font-size:15px;line-height:1.75;color:var(--text);background:#f8fafc;-webkit-font-smoothing:antialiased}
 
@@ -43,7 +43,7 @@ blockquote.strategy{border-left-color:var(--green);background:var(--green-light)
 blockquote strong{font-weight:700}
 
 .callout{display:flex;gap:10px;align-items:flex-start;padding:12px 16px;border-radius:8px;margin:14px 0;font-size:14px}
-.callout.gold{background:var(--accent-light);border:1px solid #d4a843}
+.callout.gold{background:var(--accent-light);border:1px solid #fdba74}
 .callout.blue{background:var(--blue-light);border:1px solid #93c5fd}
 .callout.green{background:var(--green-light);border:1px solid #6ee7b7}
 .callout .icon{font-size:18px;flex-shrink:0}.callout .content{flex:1}
@@ -66,6 +66,11 @@ td.label{font-weight:600;white-space:nowrap;min-width:100px;color:var(--text-sec
 .badge.gold{background:var(--accent);color:#fff}.badge.blue{background:var(--blue);color:#fff}
 .badge.green{background:var(--green);color:#fff}.badge.purple{background:var(--purple);color:#fff}
 .badge.slate{background:var(--slate);color:#fff}.badge.red{background:var(--red);color:#fff}
+
+.src{display:inline-block;font-size:10px;font-weight:700;padding:1px 6px;border-radius:3px;vertical-align:middle;margin-left:4px;letter-spacing:.3px}
+.src.rfp{background:#fef3c7;color:#92400e;border:1px solid #fcd34d}
+.src.research{background:#ede9fe;color:#5b21b6;border:1px solid #c4b5fd}
+.src.meeting{background:#dcfce7;color:#166534;border:1px solid #86efac}
 
 .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
 .compare-card{border:1px solid var(--border);border-radius:8px;padding:14px;background:var(--bg)}
@@ -100,6 +105,11 @@ td.label{font-weight:600;white-space:nowrap;min-width:100px;color:var(--text-sec
 <div class="tab-panel active" id="panel-rfp">
 
 <h2>RFP 핵심 요약</h2>
+<p style="font-size:13px;color:var(--slate);margin-bottom:16px">
+  소스 라벨: <span class="src rfp">RFP</span> 브리프 원문 &nbsp;
+  <span class="src research">리서치</span> NLM/자체 조사 &nbsp;
+  <span class="src meeting">회의</span> 팀 논의
+</p>
 
 <div class="numbers-row">
   <div class="key-number"><div class="value">D-14</div><div class="label-text">PT까지</div></div>
@@ -108,7 +118,7 @@ td.label{font-weight:600;white-space:nowrap;min-width:100px;color:var(--text-sec
   <div class="key-number"><div class="value">18만명</div><div class="label-text">서울 옥토버페스트</div></div>
 </div>
 
-<h3>클라이언트</h3>
+<h3>클라이언트 <span class="src rfp">RFP</span></h3>
 <div class="table-wrap"><table>
   <tr><td class="label">브랜드</td><td>Paulaner (파울라너) — 독일 No.1 수출 맥주, 1634년 뮌헨 설립</td></tr>
   <tr><td class="label">유통사</td><td>하이네켄코리아 (2026.01~ 하이트진로에서 전환)</td></tr>
@@ -116,25 +126,67 @@ td.label{font-weight:600;white-space:nowrap;min-width:100px;color:var(--text-sec
   <tr><td class="label">한국 MS</td><td>밀맥주 3위 (14%). 수입맥주 전체 8~9위</td></tr>
 </table></div>
 
-<h3>SOW</h3>
+<h3>브랜드 소개 <span class="src rfp">RFP</span></h3>
+
+<h4>브랜드 에센스 & 슬로건</h4>
+<div class="table-wrap"><table>
+  <tr><td class="label">글로벌 슬로건</td><td><strong>"Here's to Life Unfiltered"</strong></td></tr>
+  <tr><td class="label">한국 로컬 카피</td><td>"있는 그대로 행복한 이 순간"</td></tr>
+  <tr><td class="label">인스타 바이오</td><td>"Cheers to the unfiltered, the unplanned, the unforgettable"</td></tr>
+  <tr><td class="label">글로벌 해시태그</td><td>#ShareYourProst</td></tr>
+  <tr><td class="label">캠페인 가치</td><td>Inclusive (not exclusive), Spontaneous (not staged), Imperfect (not perfect), Grounded (not performative)</td></tr>
+</table></div>
+
+<h4>제품 라인업 <span class="src rfp">RFP</span></h4>
+<div class="table-wrap"><table>
+  <tr><th>제품</th><th>스타일</th><th>ABV</th><th>비고</th></tr>
+  <tr><td><strong>Hefe-Weissbier Naturtrub</strong></td><td>밀맥주 (무여과)</td><td>5.5%</td><td>플래그십. "Unfiltered"의 제품적 근거</td></tr>
+  <tr><td>Hefe-Weissbier Dunkel</td><td>다크 밀맥주</td><td>5.3%</td><td>풍부한 카라멜/초콜릿 노트</td></tr>
+  <tr><td><strong>Munchner Hell</strong></td><td>뮌헨 라거</td><td>4.9%</td><td>SOW에는 빠졌으나 브랜드소개에 포함. 투트랙 기회</td></tr>
+  <tr><td>Oktoberfest Bier</td><td>축제 전용 (Marzen)</td><td>6.0%</td><td>매년 새로 양조. 옥토버페스트 한정</td></tr>
+  <tr><td>Salvator</td><td>도펠복</td><td>7.9%</td><td>봄 시즌 한정. 뮌헨 문화 아이콘</td></tr>
+  <tr><td>Paulaner 0.0</td><td>무알코올</td><td>0.0%</td><td>소버 큐리어스 대응. Audi F1 서플라이</td></tr>
+</table></div>
+
+<h4>한국 시장 데이터 <span class="src rfp">RFP</span></h4>
+<div class="table-wrap"><table>
+  <tr><th>2019</th><th>2020</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>Q3 '25</th></tr>
+  <tr><td>33,918</td><td>41,523</td><td><strong>55,942</strong></td><td>44,574</td><td>36,645</td><td>37,523</td><td>27,270</td></tr>
+</table></div>
+<p style="font-size:13px;color:var(--text-secondary)">단위: HL (Off Channel). 브랜드파워: 1.1%(2019) &rarr; 1.5%(2025)</p>
+
+<h4>글로벌 브랜드 자산 <span class="src rfp">RFP</span> <span class="src research">리서치</span></h4>
+<div class="table-wrap"><table>
+  <tr><th>자산</th><th>내용</th></tr>
+  <tr><td class="label">옥토버페스트</td><td>뮌헨 6대 양조장 중 하나. <strong>최대 텐트</strong> (10,900석). 26m 회전 맥주잔 타워. 32개 텐트 중 9개에 맥주 공급(최다)</td></tr>
+  <tr><td class="label">FC 바이에른</td><td>2031년까지 공식 파트너. 레전드팀 유니폼 스폰서. 2024 한국 팬 이벤트(서울 300명+)</td></tr>
+  <tr><td class="label">Audi F1</td><td>2026 데뷔 시즌 공식 서플라이어. Paulaner 0.0 풀 포트폴리오 공급</td></tr>
+  <tr><td class="label">프랜차이즈</td><td>전 세계 50개 브라우하우스/비르츠하우스/비어하우스</td></tr>
+  <tr><td class="label">역사</td><td>1634년 파울라너 수도회 수도승 설립. 맥주순수령(Reinheitsgebot) 준수</td></tr>
+  <tr><td class="label">수출 규모</td><td>독일 No.1 수출 맥주 (1,463,000HL, 2위 대비 3배+). 70개국 유통</td></tr>
+</table></div>
+
+<hr class="divider">
+
+<h3>SOW <span class="src rfp">RFP</span></h3>
 <div class="table-wrap"><table>
   <tr><th>영역</th><th>내용</th><th>기간</th></tr>
-  <tr><td>인스타그램</td><td>채널 운영 (~5만 팔로워). 월 3~4개</td><td>5~12월</td></tr>
-  <tr><td>서울 옥토버페스트</td><td>문화비축기지, 9개 컨테이너 부스 디자인+운영</td><td>9/11~20</td></tr>
-  <tr><td>뮌헨 파견</td><td>인플루언서 3~4 + 매거진 1~2명</td><td>9~10월</td></tr>
+  <tr><td>인스타그램</td><td>채널 운영 (~5만 팔로워 인계). 월 3~4개</td><td>5~12월</td></tr>
+  <tr><td>서울 옥토버페스트</td><td>문화비축기지, 9개 컨테이너(6m x 3m) 부스 디자인+운영. <em>시공 제외</em></td><td>9/11~20</td></tr>
+  <tr><td>뮌헨 파견</td><td>인플루언서 3~4 + 매거진 1~2명. 콘텐츠 제작</td><td>9~10월</td></tr>
   <tr><td>커뮤니케이션</td><td>연간 브랜드 전략 수립</td><td>연간</td></tr>
 </table></div>
 
-<h3>평가 기준</h3>
+<h3>평가 기준 <span class="src rfp">RFP</span></h3>
 <div class="table-wrap"><table>
-  <tr><th>기준</th><th>비중</th><th>해석</th></tr>
-  <tr class="highlight"><td><strong>Creative</strong></td><td><strong>40%</strong></td><td>9컨테이너 부스 비주얼이 승부처</td></tr>
-  <tr><td>Strategic</td><td>30%</td><td>시장 역발상 + 데이터 논리</td></tr>
-  <tr><td>Communication</td><td>20%</td><td>"이 팀이랑 일하고 싶다"</td></tr>
-  <tr><td>Price</td><td>10%</td><td>지지만 않으면 됨</td></tr>
+  <tr><th>기준</th><th>비중</th><th>해석 <span class="src meeting">회의</span></th></tr>
+  <tr class="highlight"><td><strong>Creative</strong></td><td><strong>40%</strong></td><td>부스 시안 비주얼이 승부처. 3D 목업/렌더링 퀄리티</td></tr>
+  <tr><td>Strategic</td><td>30%</td><td>시장 역발상 + "왜 이 전략인가" 데이터 논리</td></tr>
+  <tr><td>Communication</td><td>20%</td><td>"이 팀이랑 일하고 싶다". 글로벌 승인 프로세스 이해</td></tr>
+  <tr><td>Price</td><td>10%</td><td>지지만 않으면 됨. 1.7/2.5억 명확 차등</td></tr>
 </table></div>
 
-<h3>예산</h3>
+<h3>예산 <span class="src rfp">RFP</span></h3>
 <div class="table-wrap"><table>
   <tr><th>항목</th><th>1.7억 (Base)</th><th>2.5억 (Full)</th></tr>
   <tr><td>서울 옥토버페스트</td><td>9컨테이너 디자인+운영</td><td>+ 사전 버즈 (8월~)</td></tr>
@@ -143,13 +195,7 @@ td.label{font-weight:600;white-space:nowrap;min-width:100px;color:var(--text-sec
   <tr><td>DOOH</td><td>미포함</td><td>코엑스/스타필드 야간</td></tr>
 </table></div>
 
-<h3>글로벌 브랜드 자산</h3>
-<ul>
-  <li><strong>옥토버페스트 최대 텐트</strong> — 10,900석, 26m 맥주잔 타워</li>
-  <li><strong>FC 바이에른 뮌헨</strong> — 2031년까지 공식 파트너</li>
-  <li><strong>Audi F1</strong> — 2026 데뷔 시즌 서플라이어 (무알코올)</li>
-  <li><strong>Since 1634</strong> — 파울라너 수도회 설립. 뮌헨 6대 양조장</li>
-</ul>
+<hr class="divider">
 
 <h3>주요 일정</h3>
 <div class="table-wrap"><table>
@@ -162,14 +208,14 @@ td.label{font-weight:600;white-space:nowrap;min-width:100px;color:var(--text-sec
   <tr class="highlight"><td><strong>4/8</strong></td><td><strong>PT</strong></td></tr>
 </table></div>
 
-<h3>주류 광고 규제 핵심</h3>
+<h3>주류 광고 규제 <span class="src research">리서치</span></h3>
 <div class="table-wrap"><table>
   <tr><th>규제</th><th>내용</th></tr>
-  <tr><td class="label">경품</td><td><span class="em-red">구매 시 사은품/추첨 = 불법</span></td></tr>
-  <tr><td class="label">DOOH</td><td>07:00~22:00 상영 불가</td></tr>
+  <tr><td class="label">경품</td><td><span class="em-red">구매 시 사은품/추첨 = 불법</span> (징역 1년 or 벌금 1천만원)</td></tr>
+  <tr><td class="label">DOOH</td><td>07:00~22:00 상영 불가 (야간만)</td></tr>
   <tr><td class="label">인플루언서</td><td>"광고"/"협찬받음" 한국어 명시 필수</td></tr>
   <tr><td class="label">경고문구</td><td>모든 소재에 과음 경고 필수</td></tr>
-  <tr><td class="label">2026.09</td><td>술병 픽토그램 의무 (축제 시기 겹침!)</td></tr>
+  <tr><td class="label">2026.09 신규</td><td>술병 픽토그램 의무 (축제 시기 겹침!)</td></tr>
 </table></div>
 
 </div>
@@ -179,8 +225,8 @@ td.label{font-weight:600;white-space:nowrap;min-width:100px;color:var(--text-sec
 <!-- ============================================================ -->
 <div class="tab-panel" id="panel-d0323">
 
-<h2>03.23 킥오프 — 딥리서치 + 전략 프레임 v1</h2>
-<p><span class="badge slate">NLM 딥리서치 100+ 소스</span> 기반. 내부 킥오프 미팅(3/24) 사전 준비 자료.</p>
+<h2>03.23 킥오프 <span class="src research">리서치</span></h2>
+<p>NLM 딥리서치 100+ 소스 기반. 내부 킥오프 미팅(3/24) 사전 준비 자료.</p>
 
 <h3>시장 컨텍스트</h3>
 <div class="numbers-row">
@@ -259,11 +305,11 @@ td.label{font-weight:600;white-space:nowrap;min-width:100px;color:var(--text-sec
 <!-- ============================================================ -->
 <div class="tab-panel" id="panel-d0324">
 
-<h2>03.24 1차 리서치 — 타겟 / 경쟁사 / 축제 + 회의</h2>
-<p><span class="badge blue">NLM 딥리서치 7건 추가 (320+ 소스)</span> + <span class="badge slate">75분 회의</span></p>
+<h2>03.24 1차 리서치</h2>
+<p><span class="src research">리서치</span> NLM 딥리서치 7건 (320+ 소스) + <span class="src meeting">회의</span> 75분 팀 회의</p>
 
 <!-- 타겟 -->
-<h3>타겟: MZ세대(21~35) 맥주 음용자</h3>
+<h3>타겟: MZ세대(21~35) 맥주 음용자 <span class="src research">리서치</span></h3>
 
 <div class="numbers-row">
   <div class="key-number"><div class="value">80%</div><div class="label-text">하이볼 구매자 중 2030</div></div>
@@ -298,7 +344,7 @@ td.label{font-weight:600;white-space:nowrap;min-width:100px;color:var(--text-sec
 <hr class="divider">
 
 <!-- 경쟁사 -->
-<h3>경쟁사: 온오프라인 플레이</h3>
+<h3>경쟁사: 온오프라인 플레이 <span class="src research">리서치</span> <span class="src meeting">회의</span></h3>
 
 <div class="table-wrap"><table>
   <tr><th>브랜드</th><th>키워드</th><th>Best Play</th></tr>
@@ -319,7 +365,7 @@ td.label{font-weight:600;white-space:nowrap;min-width:100px;color:var(--text-sec
 <hr class="divider">
 
 <!-- 축제 -->
-<h3>옥토버페스트: 맥주 너머의 축제</h3>
+<h3>옥토버페스트: 맥주 너머의 축제 <span class="src research">리서치</span> <span class="src meeting">회의</span></h3>
 
 <blockquote>테마파크 + 퍼레이드 + 음식 + 콘서트 + 가족 나들이의 종합 축제</blockquote>
 
@@ -357,7 +403,7 @@ td.label{font-weight:600;white-space:nowrap;min-width:100px;color:var(--text-sec
 <hr class="divider">
 
 <!-- 회의록 -->
-<h3>1차 리서치 회의 (75분)</h3>
+<h3>1차 리서치 회의 (75분) <span class="src meeting">회의</span></h3>
 <p>참석: 우성민, 남중, 석환, 지은, 수민(원격), 성민, 슬기</p>
 
 <h4>반복된 키워드</h4>
