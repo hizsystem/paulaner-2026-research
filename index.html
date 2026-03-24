@@ -196,11 +196,16 @@ blockquote strong { font-weight: 700; }
 .callout .content { flex: 1; }
 
 /* Tables */
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 16px 0 24px;
+}
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 16px 0 24px;
   font-size: 14px;
+  min-width: 480px;
 }
 th {
   background: #f1f5f9;
@@ -212,11 +217,16 @@ th {
   padding: 10px 14px;
   text-align: left;
   border-bottom: 2px solid var(--border);
+  white-space: nowrap;
 }
 td {
   padding: 10px 14px;
   border-bottom: 1px solid var(--border);
   vertical-align: top;
+}
+td:first-child {
+  white-space: nowrap;
+  font-weight: 500;
 }
 tr:last-child td { border-bottom: none; }
 tr.highlight td {
@@ -226,7 +236,7 @@ tr.highlight td {
 td.label {
   font-weight: 600;
   white-space: nowrap;
-  width: 140px;
+  min-width: 120px;
   color: var(--text-secondary);
 }
 
@@ -321,10 +331,11 @@ li { margin-bottom: 4px; }
   .hero { padding: 40px 0 30px; }
   h2 { font-size: 19px; }
   .compare-grid { grid-template-columns: 1fr; }
-  .numbers-row { flex-direction: column; align-items: center; }
-  .key-number { min-width: 100%; }
+  .numbers-row { flex-direction: column; align-items: stretch; }
+  .key-number { min-width: auto; }
   table { font-size: 13px; }
   td, th { padding: 8px 10px; }
+  .callout { flex-direction: column; gap: 8px; }
 }
 </style>
 </head>
@@ -351,6 +362,7 @@ li { margin-bottom: 4px; }
     <li><a href="#competitors">경쟁사 — 온오프라인 플레이</a></li>
     <li><a href="#oktoberfest">옥토버페스트 — 맥주 너머의 축제</a></li>
     <li><a href="#festivals">해외 비어축제 벤치마크</a></li>
+    <li><a href="#meeting">1차 리서치 회의 핵심 (3/24)</a></li>
     <li><a href="#strategy">전략 프레임워크</a></li>
     <li><a href="#regulation">주류 광고 규제 핵심</a></li>
   </ol>
@@ -615,8 +627,84 @@ li { margin-bottom: 4px; }
 
 <hr class="section-divider">
 
-<!-- 7. STRATEGY -->
-<h2 id="strategy">7. 전략 프레임워크</h2>
+<!-- 7. MEETING INSIGHTS -->
+<h2 id="meeting">7. 1차 리서치 회의 핵심 (3/24)</h2>
+
+<p>75분간 진행된 팀 리서치 공유 회의에서 도출된 핵심 방향과 아이디어.</p>
+
+<h3>회의에서 반복된 5가지 키워드</h3>
+<table>
+  <tr><th>키워드</th><th>맥락</th></tr>
+  <tr><td><strong>"함께 짠하는 경험"</strong></td><td>10명 동시 건배, 낯선 사람 연결, 게스트하우스 분위기. 파울라너 = "함께의 맥주"</td></tr>
+  <tr><td><strong>"연결 장치"</strong></td><td>워터밤의 물총처럼, 축제에서 낯선 사람을 잇는 매개체가 필요. 컵 색깔 매칭, 당근 모임 등</td></tr>
+  <tr><td><strong>"페어링"</strong></td><td>스텔라 한남동 300명/일, 칭따오 양꼬치. 음식+맥주 조합이 체류시간과 브랜드 경험의 핵심</td></tr>
+  <tr><td><strong>"채널별 톤 분리"</strong></td><td>RFP 재해석: 축제=정통성 강화, 인스타=현대적 재미. 정통 vs 현대 딜레마의 해법</td></tr>
+  <tr><td><strong>"축제는 카스가 장악"</strong></td><td>국내 축제 마케팅에서 카스(47만명, 얼리버드 1분 매진)를 정면 돌파는 비현실적. 다른 방식</td></tr>
+</table>
+
+<h3>회의에서 나온 아이디어</h3>
+
+<div class="callout blue">
+  <div class="icon">&#128161;</div>
+  <div class="content">
+    <strong>컵 색깔 크루 매칭</strong> &mdash; 랜덤 색깔 컵 배부 &rarr; 같은 색 10명 모이면 함께 건배. 낯선 사람끼리 자연스러운 연결 (석환)<br><br>
+    <strong>당근마켓 축제 모임</strong> &mdash; 상암 지역 당근에 "혼자 온 사람끼리 함께 마시는 모임" 기획. 요즘 모임 트렌드와 연결 (남중)<br><br>
+    <strong>"7년 저주" 에티켓</strong> &mdash; "눈 안 마주치고 마시면 7년 재수 없음" 독일 속설을 재미 요소로 활용 &rarr; 강제 아이컨택 건배 (지은)<br><br>
+    <strong>서울 한정 에디션 굿즈</strong> &mdash; 옥토버페스트 서울 전용잔, 페이스 스티커, 한국 x 독일 콜라보 메뉴 (지은)<br><br>
+    <strong>타임 슬라이싱</strong> &mdash; 낮=가족/교육/전통, 밤=파티/음악/건배. 맘카페 세그먼트는 데이타임 공략 (지은)
+  </div>
+</div>
+
+<h3>주요 논쟁 포인트</h3>
+
+<div class="compare-grid">
+  <div class="compare-card">
+    <h4>정통성 전면화</h4>
+    <ul>
+      <li>독일 전통 의상, 문화 재현</li>
+      <li>뮌헨에서 가져온 소품/전용잔</li>
+      <li>"새로운 문화 경험" 소구</li>
+      <li>헤리티지 = 요즘 트렌드와 반대 아님</li>
+    </ul>
+  </div>
+  <div class="compare-card">
+    <h4>현대적 쇄신</h4>
+    <ul>
+      <li>RFP에서 올드함 탈피 의지 보임</li>
+      <li>"Unfiltered" = 현대적 감성</li>
+      <li>SNS 콘텐츠는 확실히 현대적이어야</li>
+      <li>진비빔보울 같은 재미 레퍼런스</li>
+    </ul>
+  </div>
+</div>
+
+<blockquote class="strategy">
+  <strong>합의점:</strong> 채널별 분리 접근. 서울/뮌헨 옥토버페스트에서는 <strong>정통성</strong>을 매력적으로, 인스타그램 채널에서는 <strong>현대적이고 재미있게</strong>. 하나의 톤으로 통일할 필요 없음.
+</blockquote>
+
+<h3>경쟁사 추가 인사이트 (회의 발표)</h3>
+<table>
+  <tr><th>브랜드</th><th>회의에서 추가된 포인트</th></tr>
+  <tr><td><strong>1664 블랑</strong></td><td>덴마크 시장 실패 후 "프랑스 감성" 과감히 버리고 패션/디자인/문화 기반 리포지셔닝 &rarr; 대성공. "누가 마시는가"가 "무슨 맛인가"보다 강력</td></tr>
+  <tr><td><strong>아사히</strong></td><td>트래블 바 팝업 — 5개국 테마존 + 미니게임 + 입국 스탬프 수집 구조. 90분+ 대기줄</td></tr>
+  <tr><td><strong>스텔라</strong></td><td>고급 레스토랑 팝업 페어링. 한남동 한 달 일 평균 300명+. 페어링의 힘 입증</td></tr>
+  <tr><td><strong>기네스</strong></td><td>프리미어리그 트로피 투어 + 펍스토어. 축구장 생동감 게임 콘텐츠. 스포츠 팬덤 결합</td></tr>
+  <tr><td><strong>한맥</strong></td><td>한식 푸드 페어링 집중 마케팅. 맥주에도 페어링이 핵심</td></tr>
+</table>
+
+<h3>Next: 금요일(3/28) 10시 2차 회의</h3>
+<ul>
+  <li>과제: 파울라너가 할 수 있는 / 느낄 수 있는 <strong>"경험적 아이디어"</strong> 자유롭게 갖고 오기</li>
+  <li>형태: 텍스트 + <strong>이미지/레퍼런스 사진 필수</strong></li>
+  <li>필수: <strong>"왜 이 아이디어인지"</strong> 코멘트 포함</li>
+  <li>범위: 온오프라인 구분 없이 (축제, SNS, 인플루언서, 굿즈 다 OK)</li>
+  <li>전제: RFP 꼼꼼히 다시 읽고 오기</li>
+</ul>
+
+<hr class="section-divider">
+
+<!-- 8. STRATEGY -->
+<h2 id="strategy">8. 전략 프레임워크</h2>
 
 <blockquote>
   <strong>한 줄 전략:</strong> 축소되는 밀맥주 시장에서 싸우지 않는다. 옥토버페스트라는 독보적 플랫폼으로 "파울라너 = 독일 맥주의 정통"을 각인시키고, 서울에서 뮌헨까지 이어지는 경험 여정을 설계한다.
@@ -680,8 +768,8 @@ li { margin-bottom: 4px; }
 
 <hr class="section-divider">
 
-<!-- 8. REGULATION -->
-<h2 id="regulation">8. 주류 광고 규제 핵심</h2>
+<!-- 9. REGULATION -->
+<h2 id="regulation">9. 주류 광고 규제 핵심</h2>
 
 <blockquote class="warning">
   <strong>주의:</strong> 주류 마케팅에서 법적 리스크는 치명적. 모든 크리에이티브에 사전 법무 검토 필수.
